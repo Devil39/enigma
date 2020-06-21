@@ -1,8 +1,8 @@
 package main
 
 import (
-	"enigma/api/handlers"
 	"fmt"
+	"github.com/Devil39/enimga/api/handlers"
 )
 
 func main() {
