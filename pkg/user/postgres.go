@@ -1,18 +1,23 @@
 package user
 
-import "fmt"
+import (
+	"database/sql"
+	"fmt"
+	//"github.com/jmoiron/sqlx"
+)
 
 type repo struct {
-	n int
+	db *sql.DB
 }
 
 //NewPostgresRepo returns a new user repository
-func NewPostgresRepo(n int) Repository {
-	return &repo{n: n}
+func NewPostgresRepo(db *sql.DB) Repository {
+	return &repo{db: db}
 }
 
 func (r *repo) CreateUser() error {
 	fmt.Println("Creating User")
+	//r.db.Exec(fmt.Sprintf("INSERT INTO TABLE users VALUES()"))
 	return nil
 }
 
